@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여자친구 타입 선택 및 채팅</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+<body>
+
+    <!-- 여자친구 타입 선택 영역 -->
+    <div class="girlfriend-container">
+        <div class="girlfriend-option" onclick="selectType('thoughtful')" id="thoughtful">
+            <img src="./images/thoughtful.jpg" alt="사려깊은 그녀">
+            <p>사려깊은 여친</p>
+        </div>
+        <div class="girlfriend-option" onclick="selectType('cute')" id="cute">
+            <img src="./images//cute.jpg" alt="너무 귀여운 그녀">
+            <p>너무 귀여운 여친</p>
+        </div>
+        <div class="girlfriend-option" onclick="selectType('cool')" id="cool">
+            <img src="./images/cool.jpg" alt="쿨한 그녀">
+            <p>쿨한 타입의 여친</p>
+        </div>
+    </div>
+
+    <!-- 채팅 창 -->
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="메시지를 입력하세요">
+            <button class="send-button" onclick="sendMessage()">전송</button>
+        </div>
+    </div>
+
+ 
+
+</body>
+</html>
