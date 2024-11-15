@@ -1,3 +1,5 @@
+//241116
+
 const GIRLFRIEND_TYPES = {
     //타입
     thoughtful: {
