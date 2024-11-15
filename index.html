@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>여자친구 타입 선택 및 채팅</title>
+    <title>여자친구와 대화 채팅</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     
@@ -17,7 +17,7 @@
             <p>사려깊은 여친</p>
         </div>
         <div class="girlfriend-option" onclick="selectType('cute')" id="cute">
-            <img src="./images//cute.jpg" alt="너무 귀여운 그녀">
+            <img src="./images/cute.jpg" alt="너무 귀여운 그녀">
             <p>너무 귀여운 여친</p>
         </div>
         <div class="girlfriend-option" onclick="selectType('cool')" id="cool">
@@ -28,12 +28,34 @@
 
     <!-- 채팅 창 -->
     <div class="chat-container">
-        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-messages" id="chatMessages">
+<!--
+            <div class="con-box right-t">
+                <div class="inner-text">안녕하세요. 안녕하세요.안녕하세요.안녕하세요. 안녕하세요</div>
+                <div class="inner-icon"><img src="./images/user-profile.jpg"></div>
+            </div>
+            <div class="con-box ">
+                <div class="inner-icon"><img src="./images/user-profile.jpg"></div>
+                <div class="inner-text">안녕하세요. 안녕하세요.안녕하세요.안녕하세요. 안녕하세요. 안녕행용^^ 안녕해용 안녕해요 </div>
+            </div>
+            <div class="con-box right-t">
+                <div class="inner-text">안녕하세요. 안녕하세요.안녕하세요.안녕하세요. 안녕하세요</div>
+                <div class="inner-icon"><img src="./images/user-profile.jpg"></div>
+            </div>
+            <div class="con-box ">
+                <div class="inner-icon"><img src="./images/user-profile.jpg"></div>
+                <div class="inner-text">안녕하세요. 안녕하세요.안녕하세요.안녕하세요. 안녕하세요. 안녕행용^^ 안녕해용 안녕해요 </div>
+            </div>
+        -->
+
+
+        </div>
         <div class="chat-input-container">
             <input type="text" class="chat-input" id="chatInput" placeholder="메시지를 입력하세요">
             <button class="send-button" onclick="sendMessage()">전송</button>
         </div>
     </div>
+
 
  
 
