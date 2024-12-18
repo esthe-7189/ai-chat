@@ -1,36 +1,36 @@
-const GIRLFRIEND_TYPES = {
+const ENG_TYPES = {
   //타입
-  thoughtful: {
-    type: "thoughtful",
-    img: "./images/thoughtful.jpg",
+  level1: {
+    type: "level1",
+    img: "./images/level1.jpg",
   },
-  cute: {
-    type: "cute",
-    img: "./images/cute.jpg",
+  level2: {
+    type: "level2",
+    img: "./images/level2.jpg",
   },
-  cool: {
-    type: "cool",
-    img: "./images/cool.jpg",
+  level3: {
+    type: "level3",
+    img: "./images/level3.jpg",
   },
 };
 //내가 선택한 친구
-let selectedGirlFriend = null;
+let selectedEng = null;
 
 // 여자친구 타입 선택 처리
-function selectType(girlfriendType) {
+function selectType(engType) {
   // 선택시 style명:active
   // 모든 타입 선택시 스타일 해제, forEach사용
-  document.querySelectorAll(".girlfriend-option").forEach((option) => {
+  document.querySelectorAll(".eng-option").forEach((option) => {
     option.classList.remove("active");
   });
 
   // 1)선택한 타입 class 스타일 추가 2)선택/클릭시 스타일 class 생성 
-  document.getElementById(girlfriendType).classList.add("active");
-  //alert(girlfriendType + " 타입을 선택하셨습니다.");
-  //document.querySelector(`.girlfriend-option[onclick="selectType('${girlfriendType}')"]`).classList.add("active");
+  document.getElementById(engType).classList.add("active");
+  //alert(engType + " 타입을 선택하셨습니다.");
+  //document.querySelector(`.eng-option[onclick="selectType('${engType}')"]`).classList.add("active");
 
   //선택된 친구 타입 저정하고 채팅 리셋
-  selectedGirlFriend = GIRLFRIEND_TYPES[girlfriendType];
+  selectedEng = ENG_TYPES[engType];
   resetChat();
   
 }
@@ -93,7 +93,7 @@ function displayMessage(sender, text) {
   
   // -아이콘 img 객체 생성 -사용자 이미지 경로 지정 - 부모객체에 추가
   const profileIcon = document.createElement("img");
-  profileIcon.src = sender === "user" ? "./images/user-profile.jpg" : selectedGirlFriend.img; 
+  profileIcon.src = sender === "user" ? "./images/user-profile.png" : selectedEng.img; 
   innerIcon.appendChild(profileIcon);
 
   //-새메시지 추가
@@ -113,7 +113,7 @@ async function fetchResponse(message) {
       },
       body: JSON.stringify({
         message,
-        girlfriendType: selectedGirlFriend.type,
+        engType: selectedEng.type,
       }),
     });
     const data = await response.json();

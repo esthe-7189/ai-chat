@@ -11,6 +11,7 @@ let ceoList =[
     {name: "Eyeey Yell", age: 50, ceo: false},
     {name: "Sey Yell", age: 30, ceo: false},
 ]
+
 /*
 이름없는 펑션을 forEach()인자안에 넣기
 function (item){
@@ -26,6 +27,7 @@ names.forEach(function (item){
 names.forEach((item, index)=>{
     console.log(item, index);
 });
+
 
 //map은 return 값 있어야함/추가문자 가능
 let data = names.map((item)=>{
@@ -74,3 +76,11 @@ let data8 = names.findIndex((item)=>{
     return item == "Elon musk";
 });
 console.log("findIndex:", data8);
+
+
+describe('계산 테스트',()=>{
+    const a=1, b=2;
+    test('a+b=3이다',()=>{
+        expect(a+b).toEqual(3);
+    });
+});
